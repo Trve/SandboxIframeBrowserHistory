@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>IFrame History Navigation</title>
+		<style>
+			iframe {
+				height: 400px;
+				width: 300px;
+			}
+			iframe[sandbox] {
+				box-shadow: 0 0 10px 5px red;
+			}
+			h2 {
+				margin-bottom: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>iframe</h2>
+		<iframe src="inner-iframe-with-navigation.html"></iframe>
+		<h2>iframe (with sandbox)</h2>
+		<iframe src="inner-iframe-with-navigation.html" sandbox="allow-scripts"></iframe>
+	</body>
+</html>

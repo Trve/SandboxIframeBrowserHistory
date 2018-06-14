@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>inner inner iframe</title>
+		<script>
+			(function() {
+				function getRandomColor() {
+					var letters = '0123456789ABCDEF';
+					var color = '#';
+					for (var i = 0; i < 6; i++) {
+						color += letters[Math.floor(Math.random() * 16)];
+					}
+					return color;
+				}
+				document.addEventListener('DOMContentLoaded', function() {
+					document.body.style.backgroundColor = getRandomColor();
+					document.querySelector('#navigator').addEventListener('click', function() {
+						window.history.back();
+					});
+				});
+			})();
+		</script>
+	</head>
+	<body>
+		<button id="navigator">Navigate!</button>
+	</body>
+</html>
